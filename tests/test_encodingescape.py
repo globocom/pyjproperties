@@ -1,8 +1,11 @@
 # vim: fileencoding=utf-8
 
 import pytest
-from StringIO import StringIO
-from jproperties import Properties
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import BytesIO as StringIO
+from pyjproperties import Properties
 
 @pytest.mark.parametrize("out_encoding", ["ascii", "iso-8859-1"])
 def test_euro(out_encoding):

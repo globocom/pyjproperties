@@ -1,0 +1,9 @@
+{
+  "tests/test_encodingescape.py::test_euro[ascii]": true,
+  "tests/test_escape_parsing.py::test_simple_escape_parsing": true,
+  "tests/test_line_continuation.py::test_line_continuation_allowed": true,
+  "tests/test_line_continuation.py::test_line_continuation_forbidden": true,
+  "tests/test_line_continuation.py::test_stray_line_continuation": true,
+  "tests/test_simple_utf8.py::test_simple_utf8_load_write_file": true,
+  "tests/test_surrogate.py::test_surrogate_roundtrip[ascii]": true
+}

@@ -3,7 +3,7 @@ import os
 from setuptools import setup
 
 setup(
-    name="jproperties",
+    name="pyjproperties",
     version="1.0.1",
     description="Java Property file parser and writer for Python",
     # Read the long description from our README.rst file, as UTF-8.
@@ -19,12 +19,11 @@ setup(
     author_email="tilman+pypi@ax86.net",
     entry_points={
         "console_scripts": [
-            "propconv = jproperties:main"
+            "propconv = pyjproperties:main"
         ]
     },
-    url="https://github.com/Tblue/python-jproperties",
-    download_url="https://github.com/Tblue/python-jproperties/archive/v1.0.1.tar.gz",
-    py_modules=["jproperties"],
+    url="https://github.com/globocom/pyjproperties",
+    py_modules=["pyjproperties"],
     install_requires=["six>=1.10.0"],
     setup_requires=["pytest-runner ~= 2.0"],
     tests_require=[

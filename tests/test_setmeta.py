@@ -1,6 +1,6 @@
 # vim: fileencoding=utf-8
 
-from jproperties import Properties
+from pyjproperties import Properties
 from six import StringIO
 
 def test_setmeta_bytes():

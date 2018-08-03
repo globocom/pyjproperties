@@ -1,4 +1,4 @@
-from jproperties import Properties
+from pyjproperties import Properties
 
 def test_repeated():
     p = Properties()

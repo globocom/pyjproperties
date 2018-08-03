@@ -11,7 +11,7 @@ modification, are permitted provided that the following conditions are met:
   this list of conditions and the following disclaimer in the documentation
   and/or other materials provided with the distribution.
 
-* Neither the name of jProperties nor the names of its
+* Neither the name of PyjProperties nor the names of its
   contributors may be used to endorse or promote products derived from
   this software without specific prior written permission.
 
@@ -30,12 +30,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 THIRD-PARTY CODE / WORK DERIVED FROM THIRD-PARTY CODE:
 
-The _escape_non_ascii() function in jproperties.py is based on code from the
+The _escape_non_ascii() function in pyjproperties.py is based on code from the
 JSON library module shipped with Python 2.7.3 (file json/encoder.py, function
 py_encode_basestring_ascii), which is Copyright (c) 2001, 2002, 2003, 2004,
 2005, 2006 Python Software Foundation; All Rights Reserved. A summary of
 changes to that original function can be found in the documentation of
-_escape_non_ascii() in jproperties.py. The license for the original function
+_escape_non_ascii() in pyjproperties.py. The license for the original function
 is included below:
 
 PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2

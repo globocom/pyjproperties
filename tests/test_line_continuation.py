@@ -1,7 +1,10 @@
 # vim: fileencoding=utf-8
 
-from jproperties import Properties
-from StringIO import StringIO
+from pyjproperties import Properties
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 
 def test_line_continuation_allowed():

@@ -1,4 +1,4 @@
-# jProperties - Java Property file parser and writer for Python
+# PyjProperties - Java Property file parser and writer for Python
 #
 # Copyright (c) 2015, Tilman Blumenbach
 # All rights reserved.
@@ -13,7 +13,7 @@
 #   this list of conditions and the following disclaimer in the documentation
 #   and/or other materials provided with the distribution.
 #
-# * Neither the name of jProperties nor the names of its
+# * Neither the name of PyjProperties nor the names of its
 #   contributors may be used to endorse or promote products derived from
 #   this software without specific prior written permission.
 #
@@ -53,7 +53,7 @@ def _escape_non_ascii(unicode_obj):
     This function is based on code from the JSON library module shipped with Python 2.7.3
     (json/encoder.py, function py_encode_basestring_ascii), which is Copyright (c) 2001, 2002, 2003,
     2004, 2005, 2006 Python Software Foundation; All Rights Reserved. See the file LICENSE included
-    with jProperties for the full license terms. If that file is not available, then please see:
+    with PyjProperties for the full license terms. If that file is not available, then please see:
     https://www.python.org/download/releases/2.7.3/license/
 
     Differences to the aforementioned original version of py_encode_basestring_ascii():
@@ -582,8 +582,10 @@ class Properties(object):
                     final_codepoint += codepoint2 & 0x03FF
 
                     codepoint = final_codepoint
-
-                return unichr(codepoint)
+                try:
+                    return unichr(codepoint)
+                except:
+                    return chr(codepoint)
             except (EOFError, ValueError) as e:
                 raise ParseError(str(e), start_linenumber, self._source_file)
 
@@ -824,7 +826,7 @@ class Properties(object):
         # ugly ugly hack
         def output(*args, **kwargs):
             data = (' '.join(args) + "\n").encode(
-                'utf-8', errors="jproperties.jbackslashreplace")
+                'utf-8', errors="pyjproperties.jbackslashreplace")
             if six.PY3 and hasattr(out_stream, 'encoding'):
                 data = data.decode('utf-8')
             out_stream.write(data)

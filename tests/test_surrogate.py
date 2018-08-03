@@ -1,6 +1,9 @@
 import pytest
-from StringIO import StringIO
-from jproperties import Properties, ParseError
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import BytesIO as StringIO
+from pyjproperties import Properties, ParseError
 
 
 @pytest.mark.parametrize("out_encoding", ["ascii", "latin-1"])

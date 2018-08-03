@@ -1,7 +1,7 @@
-jProperties for Python |pypi-badge|
+PyjProperties for Python |pypi-badge|
 =====================================
 
-jProperties is a Java Property file parser and writer for Python. It aims to provide the same functionality
+PyjProperties is a Java Property file parser and writer for Python. It aims to provide the same functionality
 as `Java's Properties class <http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html>`_, although
 currently the XML property format is not supported.
 
@@ -13,7 +13,7 @@ Installation
 
 You can install jProperties using `pip <https://pip.pypa.io/>`_::
 
-    pip install jproperties
+    pip install pyjproperties
 
 Overview
 --------
@@ -31,7 +31,7 @@ Parsing a property file
 
 .. code:: python
 
-    from jproperties import Properties
+    from pyjproperties import Properties
 
     p = Properties()
     with open("foobar.properties", "rb") as f:
@@ -44,7 +44,7 @@ Writing a property file
 
 .. code:: python
 
-    from jproperties import Properties
+    from pyjproperties import Properties
 
     p = Properties()
     p["foobar"] = "A very important message from our sponsors: Python is great!"
@@ -57,7 +57,7 @@ Reading from and writing to the same file-like object
 
 .. code:: python
 
-    from jproperties import Properties
+    from pyjproperties import Properties
 
     with open("foobar.properties", "r+b") as f:
         p = Properties()
@@ -116,7 +116,7 @@ The ``properties`` property is nevertheless useful to set many default values be
 
 .. code:: python
 
-    from jproperties import Properties
+    from pyjproperties import Properties
 
     prop_obj = Properties()
     prop_obj.properties = a_big_dictionary_with_defaults
